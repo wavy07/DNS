@@ -50,7 +50,7 @@ check_status
 
 print_status "Downloading SSLH fix script..."
 cd /usr/bin || exit 1
-wget -q -O sl-fix "https://raw.githubusercontent.com/athumani2580/DNS/main/sslh-fix/sl-fix"
+wget -q -O sl-fix "https://raw.githubusercontent.com/wavy07/DNS/main/sslh-fix/sl-fix"
 check_status
 
 sudo chmod +x sl-fix
@@ -73,13 +73,13 @@ mkdir -p /etc/slowdns
 chmod 777 /etc/slowdns
 
 print_status "Downloading SlowDNS files..."
-wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/athumani2580/DNS/main/slowdns/server.key"
+wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/wavy07/DNS/main/slowdns/server.key"
 check_status
 
-wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/athumani2580/DNS/main/slowdns/server.pub"
+wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/wavy07/DNS/main/slowdns/server.pub"
 check_status
 
-wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/athumani2580/DNS/main/slowdns/sldns-server"
+wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/wavy07/DNS/main/slowdns/sldns-server"
 check_status
 
 chmod +x /etc/slowdns/server.key /etc/slowdns/server.pub /etc/slowdns/sldns-server
@@ -104,7 +104,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/etc/slowdns/sldns-server -udp :5300 -mtu 512 -privkey-file /etc/slowdns/server.key $NAMESERVER 127.0.0.1:22
+ExecStart=/etc/slowdns/sldns-server -udp :5300 -mtu 1800 -privkey-file /etc/slowdns/server.key $NAMESERVER 127.0.0.1:22
 Restart=always
 RestartSec=5
 
