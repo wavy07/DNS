@@ -14,10 +14,10 @@ rm -r menu
 rm -rf menu
 rm updatemenu
 cd /usr/bin
-wget -O sslh-fix-reboot "https://raw.githubusercontent.com/athumani2580/DNS/main/sslh-fix/sslh-fix-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/athumani2580/DNS/main/ssh/restart.sh"
-wget -O updatemenu "https://raw.githubusercontent.com/athumani2580/DNS/main/update/updatemenu.sh"
-wget -O menu "https://raw.githubusercontent.com/athumani2580/DNS/main/update/menu.sh"
+wget -O sslh-fix-reboot "https://raw.githubusercontent.com/wavy07/DNS/main/sslh-fix/sslh-fix-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/wavy07/DNS/main/ssh/restart.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/wavy07/DNS/main/update/updatemenu.sh"
+wget -O menu "https://raw.githubusercontent.com/wavy07/DNS/main/update/menu.sh"
 cd /usr/bin
 chmod +x sslh-fix-reboot
 chmod +x restart
